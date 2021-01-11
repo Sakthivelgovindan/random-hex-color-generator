@@ -4,7 +4,7 @@ Generate a random hex color.
 
 # Installation
 
-```
+```bash
 npm install --save random-hex-color
 
 ```
