@@ -4,18 +4,29 @@ Generate a random hex color.
 
 # Installation
 
-```bash
-npm install --save random-hex-color
+```
+npm install --save random-hex-color-generator
 
 ```
-## Usage
+## Getting Started
 
-```
-const { randomHexColor } = require('random-hex-color-generator')
+```javascript
+const { 
+    randomHexColor, 
+    randomHexColorStartWith, 
+    randomHexColorEndWith
+} = require('random-hex-color-generator')
 
-randomHexColor() // => '#ffe6e6'
-randomHexColor() // => '#660000'
-randomHexColor() // => '#a65959'
-randomHexColor() // => '#00ffbf'
+
+// Generate random hex color
+randomHexColor() // => OUTPUT --> '#FFE2A3'
+
+
+// Generate random hex color start with custom hex code
+randomHexColorStartWith('00') // => OUTPUT --> '#00AFD2'
+
+
+// Generate random hex color end with custom hex code
+randomHexColorEndWith('FF') // => OUTPUT --> '#2345FF'
 
 ```
