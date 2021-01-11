@@ -10,7 +10,7 @@ npm install --save random-hex-color-generator
 ```
 ## Getting Started
 
-```javascript
+```css
 const { 
     randomHexColor, 
     randomHexColorStartWith, 
