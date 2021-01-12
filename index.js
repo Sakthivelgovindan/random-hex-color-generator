@@ -94,6 +94,36 @@ function randomHexColorWithArrayOfObject(count) {
   return randomArray;
 }
 
+// Generate random hex color with array
+function randomHexColorArrayStartWith(start, count) {
+  if (start) {
+    const arrayLength = count ? count : generateRandomNumber();
+    const randomArray = [];
+    for (let x = 0; x < arrayLength; x++) {
+      const hexColor = randomHexColorStartWith(start);
+      randomArray.push(hexColor);
+    }
+    return randomArray;
+  } else {
+    return randomHexColorWithArray();
+  }
+}
+
+// Generate random hex color with array
+function randomHexColorArrayEndWith(end, count) {
+  if (end) {
+    const arrayLength = count ? count : generateRandomNumber();
+    const randomArray = [];
+    for (let x = 0; x < arrayLength; x++) {
+      const hexColor = randomHexColorEndWith(end);
+      randomArray.push(hexColor);
+    }
+    return randomArray;
+  } else {
+    return randomHexColorWithArray();
+  }
+}
+
 module.exports = {
   randomHexColor,
   randomHexColorStartWith,
@@ -101,4 +131,6 @@ module.exports = {
   randomHexColorStartAndEndWith,
   randomHexColorWithArray,
   randomHexColorWithArrayOfObject,
+  randomHexColorArrayStartWith,
+  randomHexColorArrayEndWith,
 };
