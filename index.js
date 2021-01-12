@@ -1,4 +1,4 @@
-const { validateHexColor, generateStaticString } = require("./utils");
+const { validateHexColor, generateStaticString, generateRandomNumber } = require("./utils");
 
 // Generate random hex color
 function randomHexColor() {
@@ -45,7 +45,6 @@ function randomHexColorEndWith(end) {
 }
 
 // Generate random hex color start and end with
-
 function randomHexColorStartAndEndWith(start, end) {
   if (start && end) {
     const staticStartLength = start.length;
@@ -73,4 +72,33 @@ function randomHexColorStartAndEndWith(start, end) {
   }
 }
 
-module.exports = { randomHexColor, randomHexColorStartWith, randomHexColorEndWith, randomHexColorStartAndEndWith };
+// Generate random hex color with array
+function randomHexColorWithArray(count) {
+  const arrayLength = count ? count : generateRandomNumber();
+  const randomArray = [];
+  for (let x = 0; x < arrayLength; x++) {
+    const hexColor = randomHexColor();
+    randomArray.push(hexColor);
+  }
+  return randomArray;
+}
+
+// Generate random hex color with array of object
+function randomHexColorWithArrayOfObject(count) {
+  const arrayLength = count ? count : generateRandomNumber();
+  const randomArray = [];
+  for (let x = 0; x < arrayLength; x++) {
+    const hexColor = randomHexColor();
+    randomArray.push({ key: x, value: hexColor });
+  }
+  return randomArray;
+}
+
+module.exports = {
+  randomHexColor,
+  randomHexColorStartWith,
+  randomHexColorEndWith,
+  randomHexColorStartAndEndWith,
+  randomHexColorWithArray,
+  randomHexColorWithArrayOfObject,
+};

@@ -10,4 +10,7 @@ const generateStaticString = (padLength) => {
   return staticString;
 };
 
-module.exports = { validateHexColor, generateStaticString };
+const generateRandomNumber = () => {
+  return Math.floor(Math.random() * 10) + 1;
+};
+module.exports = { validateHexColor, generateStaticString, generateRandomNumber };
