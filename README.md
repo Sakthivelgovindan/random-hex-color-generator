@@ -5,9 +5,15 @@ Generate a random hex color.
 # Installation
 
 ```
-npm install --save random-hex-color-generator
+npm install random-hex-color-generator
+```
+
+or
 
 ```
+yarn install random-hex-color-generator
+```
+
 ## Getting Started
 
 ```javascript
