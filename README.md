@@ -6,12 +6,10 @@ Generate a random hex color.
 
 ```
 npm install random-hex-color-generator
-```
 
 or
 
-```
-yarn install random-hex-color-generator
+yarn add random-hex-color-generator
 ```
 
 ## Getting Started
